@@ -15,8 +15,9 @@
     <script type="text/javascript" src="js/functions.js"></script>
 </head>
 
-<body>
+<body onclick="document.getElementById('bg-music').play()">
 	<div id="mainDiv">
+		<audio id="bg-music" src="./music/1.mp3" autoplay loop></audio>
 		<div id="content" style="display: flex; justify-content: center;">
 			<div id="code" style="display: none;">
 				<span class="comments">/**</span><br />
@@ -74,6 +75,8 @@
 		together.setMinutes(0);
 		together.setSeconds(0);
 		together.setMilliseconds(0);
+
+		document.getElementById('bg-music').play();
 		
 		if (!document.createElement('canvas').getContext) {
 			var msg = document.createElement("div");
